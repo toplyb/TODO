@@ -1,6 +1,7 @@
 import { Container, createRoot } from 'react-dom/client'
 import 'normalize.css'
 import '@/css/init.less'
+import '@/css/common.less'
 import { Main } from './main';
 
 

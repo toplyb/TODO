@@ -1,4 +1,4 @@
-import style from '@/pages/index/index.module.less'
+import style from '@/components/taskForm/index.module.less'
 import React, { ChangeEvent, useState } from 'react'
 import { ITaskItem } from '@/types/task.ts'
 
@@ -38,7 +38,7 @@ export function TaskForm({ taskList, setTaskList }: { taskList: ITaskItem[], set
   return (
     <div className={style['task-form']}>
       <input placeholder="请输入内容" value={taskInput} onChange={handlerSetTaskInput} onKeyUp={handlerClickEnter}></input>
-      <button onClick={submitTask}>提交</button>
+      <button onClick={submitTask}>submit</button>
     </div>
   )
 }

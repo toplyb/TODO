@@ -8,28 +8,7 @@
   justify-content: start;
   align-items: center;
   padding: 100px 0;
-
-  .task-form {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    input {
-      flex: 1;
-      border-radius: 5px;
-      padding: 10px;
-      border: 1px solid #666666;
-    }
-
-    button {
-      margin-left: 10px;
-      cursor: pointer;
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-  }
+  color: #352a68;
 
   .task-list {
     width: 100%;
@@ -40,40 +19,5 @@
     align-content: center;
     margin-top: 50px;
     position: relative;
-
-    .task-item {
-      width: 100%;
-      height: 50px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      padding: 5px 15px;
-      border: 1px solid #666;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      pointer-events: auto;
-      position: absolute;
-
-      &-left {
-        display: flex;
-        align-items: center;
-        flex: 1;
-
-        span {
-          font-weight: bold;
-          margin-left: 10px;
-          margin-right: 5px;
-          font-size: 20px;
-        }
-      }
-
-      button {
-        cursor: pointer;
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-      }
-    }
   }
 }

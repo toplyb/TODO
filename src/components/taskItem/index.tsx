@@ -1,4 +1,4 @@
-import style from '@/pages/index/index.module.less'
+import style from '@/components/taskItem/index.module.less'
 import { ITaskItem } from '@/types/task.ts'
 import React, { useState } from 'react'
 
@@ -82,13 +82,13 @@ export function TaskItem(props: any) {
   }
 
   return (
-    <li style={props.style} className={style['task-item']} draggable="true" id={props.task.id + ''} onMouseDown={mouseDown} onDragEnd={mouseUp}>
-      <div className={style['task-item-left']} onClick={() => changeTaskStatus(props.task)}>
+    <li style={props.style} className={`${style['task-item']}  ${props.task.status === 1 ? style['finished'] : ''}`} draggable="true" id={props.task.id + ''} onMouseDown={mouseDown} onDragEnd={mouseUp}>
+      <div className={`${style['task-item-left']}`} onClick={() => changeTaskStatus(props.task)}>
         <input value={props.task.status} checked={props.task.status === 1} type="radio" onChange={() => changeTaskStatus(props.task)}/>
         <span>{props.task.id}.</span>
         <p>{props.task.content}</p>
       </div>
-      <button onClick={() => deleteTask(props.task.id)}>删除</button>
+      <button onClick={() => deleteTask(props.task.id)}>x</button>
     </li>
   )
 }

@@ -1,8 +1,8 @@
 import style from './index.module.less'
 import { useEffect, useRef, useState } from 'react'
 import { ITaskItem } from '@/types/task.ts'
-import { TaskForm } from '@/components/taskForm.tsx'
-import { TaskItem } from '@/components/taskItem.tsx'
+import { TaskForm } from '@/components/taskForm'
+import { TaskItem } from '@/components/taskItem'
 
 export function Index() {
   const [taskList, setTaskList] = useState(JSON.parse(sessionStorage.getItem('tasks') || '[]'))
